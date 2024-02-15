@@ -1,7 +1,7 @@
 {
   "name": "@padcom/vue-ast-serializer",
   "version": "0.0.1",
-  "description": "",
+  "description": "Vue.js single file component (SFC) AST serializer",
   "main": "./dist/vue-ast-serializer.umd.js",
   "module": "./dist/vue-ast-serializer.mjs",
   "types": "./dist/types.d.ts",
