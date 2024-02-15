@@ -13,6 +13,9 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "vite",
     "test": "npm run clean && vitest run --root . --coverage",
@@ -33,7 +36,6 @@
   "devDependencies": {
     "@padcom/eslint-config-typescript": "^0.6.0",
     "@vitest/coverage-v8": "^1.2.2",
-    "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.44.0",
     "rimraf": "^5.0.5",
     "typescript": ">= 3.3.0 < 5.1.0",
