@@ -1,0 +1,14 @@
+{
+  "Component": {
+    "prefix": ["vuec", "vue-component"],
+    "body": [
+      "<template>\n  ${1}\n<template>",
+      "",
+      "<script lang=\"ts\" setup>\n${2:import { ref \\} from 'vue'}\n</script>",
+      "",
+      "<style lang=\"postcss\" scoped>\n${3}</style>",
+      "",
+    ],
+    "scope": "vue"
+  },
+}

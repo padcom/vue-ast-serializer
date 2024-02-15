@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start",
+      "type": "npm",
+      "script": "start",
+      "runOptions": {
+        "instanceLimit": 1,
+      },
+      "isBackground": true,
+      "promptOnClose": false,
+      "problemMatcher": [
+        {
+          "owner": "typescript",
+          "source": "Typescript",
+          "applyTo": "allDocuments",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "VITE",
+            "endsPattern": "ready",
+          },
+          "pattern": [
+            {
+              "regexp": "(VITE) .* (ready) in (\\d+) ms",
+              "message": 2,
+              "line": 0,
+              "file": 0,
+              "column": 0,
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

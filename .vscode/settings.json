@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "testing.automaticallyOpenPeekView": "never",
+  "cSpell.words": [
+    "intlify",
+    "unplugin",
+    "vuejs"
+  ]
+}

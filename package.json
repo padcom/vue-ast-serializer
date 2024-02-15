@@ -1,0 +1,55 @@
+{
+  "name": "@padcom/vue-ast-serializer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/vue-ast-serializer.umd.js",
+  "module": "./dist/vue-ast-serializer.mjs",
+  "types": "./dist/types.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/vue-ast-serializer.umd.js",
+      "import": "./dist/vue-ast-serializer.mjs",
+      "types": "./dist/types.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "start": "vite",
+    "test": "vitest run --environment jsdom --root . --coverage",
+    "test:watch": "vitest watch --environment jsdom --root . --coverage",
+    "lint": "eslint './{components,lib}/**/*.{ts,vue}'",
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/compiler-core": "^3.4.19",
+    "@vue/compiler-sfc": "^3.4.19"
+  },
+  "devDependencies": {
+    "@padcom/eslint-config-typescript": "^0.6.0",
+    "@vue/tsconfig": "^0.4.0",
+    "@vitest/coverage-v8": "^1.2.2",
+    "eslint": "^8.44.0",
+    "typescript": ">= 3.3.0 < 5.1.0",
+    "vite": "^5.1.1",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^1.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@padcom/eslint-config-typescript"
+    ]
+  },
+  "homepage": "https://github.com/padcom/vue-ast-serializer#readme",
+  "bugs": {
+    "url": "https://github.com/padcom/vue-ast-serializer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padcom/vue-ast-serializer.git"
+  }
+}
