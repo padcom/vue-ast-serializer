@@ -1,8 +1,7 @@
-/* eslint-disable max-lines-per-function */
 import { describe, it, expect } from 'vitest'
-import { parse } from '@vue/compiler-sfc'
 
-import { stringify } from '.'
+import { parse } from '@vue/compiler-sfc'
+import { stringify } from '..'
 
 function verify(code: string, expected: string = code) {
   const ast = parse(code)
@@ -10,6 +9,7 @@ function verify(code: string, expected: string = code) {
   expect(actual).toBe(expected)
 }
 
+/* eslint-disable-next-line max-lines-per-function */
 describe('VUE SFC serialization', () => {
   it('will serialize simple template', () => {
     verify('<template></template>')

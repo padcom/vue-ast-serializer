@@ -15,24 +15,27 @@
   },
   "scripts": {
     "start": "vite",
-    "test": "vitest run --environment jsdom --root . --coverage",
-    "test:watch": "vitest watch --environment jsdom --root . --coverage",
+    "test": "npm run clean && vitest run --root . --coverage",
+    "test:watch": "npm run clean && vitest watch --root . --coverage",
     "lint": "eslint './{components,lib}/**/*.{ts,vue}'",
     "dev": "vite build -w",
-    "build": "vite build"
+    "build": "vite build",
+    "clean": "rimraf dist coverage",
+    "prepublishOnly": "npm run clean && npm install && npm test && npm run build"
   },
   "keywords": [],
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@vue/compiler-core": "^3.4.19",
-    "@vue/compiler-sfc": "^3.4.19"
+  "peerDependencies": {
+    "@vue/compiler-core": "^3.0.0",
+    "@vue/compiler-sfc": "^3.0.0"
   },
   "devDependencies": {
     "@padcom/eslint-config-typescript": "^0.6.0",
-    "@vue/tsconfig": "^0.4.0",
     "@vitest/coverage-v8": "^1.2.2",
+    "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.44.0",
+    "rimraf": "^5.0.5",
     "typescript": ">= 3.3.0 < 5.1.0",
     "vite": "^5.1.1",
     "vite-plugin-dts": "^3.7.2",

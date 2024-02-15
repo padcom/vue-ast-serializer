@@ -165,7 +165,6 @@ export function serializeCustomBlock(block: SFCBlock) {
 
   const attrs = Object.entries(block.attrs).map(([name, value]) => `${name}="${value}"`).join(' ')
   const attrsStr = attrs ? ` ${attrs}` : ''
-  console.log('block:', block)
 
   return `<${block.type}${attrsStr}>${block.content}</${block.type}>`
 }

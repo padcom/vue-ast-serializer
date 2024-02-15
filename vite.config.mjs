@@ -15,13 +15,12 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: './lib/index.ts',
       name: pkg.name.split('/').at(-1),
     },
     sourcemap: true,
   },
   test: {
-    environment: 'jsdom',
     setupFiles: [
       './vitest.setup.mjs',
     ],
